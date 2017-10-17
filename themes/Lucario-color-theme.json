@@ -1,11 +1,15 @@
 {	
 	"colors": {
+		"foreground": "#F8F8F2",
+		"errorForeground": "#F92672",
 		"editor.background": "#2b3e50",
 		"editor.foreground": "#F8F8F2",
 		"editorLineNumber.foreground": "#416789",
 		"editorCursor.foreground": "#F8F8F2",
 		"editor.selectionBackground": "#19242f",
 		"editor.selectionHighlightBackground": "#416789",
+		"editor.findMatchHighlightBackground": "#3F9AB7",
+		"editorOverviewRuler.findMatchForeground": "#FFF",
 		"editor.inactiveSelectionBackground": "#385772",
 		"editorWhitespace.foreground": "#61bbc8",
 		"editor.lineHighlightBackground": "#243443",
