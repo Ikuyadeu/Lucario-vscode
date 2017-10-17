@@ -1,8 +1,32 @@
-{
+{	
+	"colors": {
+		"editor.background": "#2b3e50",
+		"editor.foreground": "#F8F8F2",
+		"editorLineNumber.foreground": "#416789",
+		"editorCursor.foreground": "#F8F8F2",
+		"editor.selectionBackground": "#19242f",
+		"editor.selectionHighlightBackground": "#416789",
+		"editor.inactiveSelectionBackground": "#385772",
+		"editorWhitespace.foreground": "#61bbc8",
+		"editor.lineHighlightBackground": "#243443",
+		"inputValidation.errorBackground": "#F92672",
+		"inputValidation.warningBackground": "#AE81FF",
+		"diffEditor.removedTextBackground": "#2b3e50",
+		"diffEditor.removedTextBorder": "#F92672",
+		"diffEditor.insertedTextBackground": "#2b3e50",
+		"diffEditor.insertedTextBorder": "#A6E22E",
+		"button.background": "#5c98cd",
+		"button.foreground": "#F8F8F2",
+		"activityBar.border": "#5c98cd",
+		"sideBar.border": "#5c98cd",
+		"tab.activeBorder": "#5c98cd",
+		"panelTitle.activeBorder": "#5c98cd"
+		// "tab.border": "#5c98cd"
+
+	},
 	"tokenColors": [
 		{
 			"settings": {
-				"background": "#2B3E50",
 				"foreground": "#F8F8F2",
 				"selectionBorder": "#10171e",
 				"findHighlight": "#3F9AB7",
@@ -163,7 +187,6 @@
 			"name": "Invalid",
 			"scope": "invalid",
 			"settings": {
-				"background": "#F92672",
 				"fontStyle": "",
 				"foreground": "#F8F8F0"
 			}
@@ -172,7 +195,6 @@
 			"name": "Invalid deprecated",
 			"scope": "invalid.deprecated",
 			"settings": {
-				"background": "#AE81FF",
 				"foreground": "#F8F8F0"
 			}
 		},
@@ -190,7 +212,6 @@
 			"name": "diff.deleted",
 			"scope": "markup.deleted",
 			"settings": {
-				"background": "#2b3e50",
 				"foreground": "#F92672"
 			}
 		},
@@ -198,7 +219,6 @@
 			"name": "diff.inserted",
 			"scope": "markup.inserted",
 			"settings": {
-				"background": "#2b3e50",
 				"foreground": "#A6E22E"
 			}
 		},
@@ -206,7 +226,6 @@
 			"name": "diff.changed",
 			"scope": "markup.changed",
 			"settings": {
-				"background": "#2b3e50",
 				"foreground": "#E6DB74"
 			}
 		}
