@@ -4,7 +4,7 @@
     "author": {
         "name": "Yuki Ueda"
     },
-    "icon": "https://github.com/raphamorim/lucario/blob/master/images/lucario.png",
+    "icon": "images/lucario.png",
     "description": "The best colorful flat theme ever.",
     "license": "MIT",
     "repository": {
@@ -16,7 +16,6 @@
     },
     "version": "0.0.1",
     "publisher": "Ikuyadeu",
-    "readme": "https://github.com/raphamorim/lucario/blob/master/readme.md",
     "engines": {
         "vscode": "^1.17.0"
     },

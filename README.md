@@ -6,6 +6,17 @@
 This theme made by [Raphael Amorim](https://github.com/raphamorim).
 And original repository is [here](https://github.com/raphamorim/lucario)
 
+![vscode](./images/vscode.png)
+
+## Install using Command Palette
+1. Go to View -> Command Palette or press Ctrl+Shift+P
+2. Then enter Install Extension
+2. Write lucario
+3. Select it or press Enter to install
+
+## Activating theme
+Run Visual Studio Code. The Lucario Theme will be available from File -> Preferences -> Color Theme dropdown menu.
+
 ## Color Palette
 
 Palette      | Hex       | RGB           | HSL
