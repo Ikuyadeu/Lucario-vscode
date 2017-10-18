@@ -1,4 +1,7 @@
 # Change Log
+## 0.0.3
+Support bar color
+
 ## 0.0.2
 Fix some color and icon
 
