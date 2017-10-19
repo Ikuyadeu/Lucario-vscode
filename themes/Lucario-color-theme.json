@@ -47,7 +47,7 @@
 		"list.activeSelectionForeground": "#f8f8f2",
 		"list.dropBackground": "#19242f",
 		"list.focusBackground": "#19242f75",
-		"list.highlightForeground": "#72C05D",
+		"list.highlightForeground": "#66D9EF",
 		"list.hoverBackground": "#19242f75",
 		"list.inactiveSelectionBackground": "#19242f75",
 		// "list.inactiveFocusForeground": "#ff0000",
@@ -57,12 +57,14 @@
 		"activityBar.background": "#374F66",
 		// "activityBar.dropBackground": "#ff0000",
 		"activityBar.foreground": "#F8F8F2",
+		// "activityBar.border": "#5c98cd",
 		"activityBarBadge.background": "#66D9EF",
 		"activityBarBadge.foreground": "#F8F8F2",
 
 		// Side Bar
 		"sideBar.background": "#22313F",
 		// "sideBar.foreground": "#ff0000",
+		// "sideBar.border": "#5c98cd",
 		// "sideBar.dropBackground": "#ff0000",
 		"sideBarTitle.foreground": "#F8F8F2",
 		// "sideBarSectionHeader.background": "#ff0000",
@@ -71,27 +73,82 @@
 		// Editor Group and Tabs
 		// "editorGroup.background": "#ff0000",
 		"editorGroup.border": "#66D9EF",
+		"editorGroup.dropBackground": "#19242f70",
+		// "editorGroupHeader.noTabsBackground": "#ff0000",
+		"editorGroupHeader.tabsBackground": "#1B2733",
+		// "editorGroupHeader.tabsBorder": "#ff0000",
+		"tab.activeBackground": "#2b3e50",
+		"tab.activeForeground": "#f8f8f2",
+		"tab.border": "#1B2733",
+		"tab.activeBorder": "#66D9EF80",
+		// "tab.unfocusedActiveBorder": "#ff0000",
+		"tab.inactiveBackground": "#22313F",
+		"tab.inactiveForeground": "#5c98cd",
+		// "tab.unfocusedActiveBorder": "#ff0000",
+		// "tab.unfocusedActiveForeground": "#ff0000",
 
+		// Editor Colors
 		"editor.background": "#2b3e50",
 		"editor.foreground": "#F8F8F2",
 		"editorLineNumber.foreground": "#5c98cd",
-		"editorCursor.foreground": "#F8F8F2",
+		// "editorCursor.foreground": "#F8F8F2",
+
 		"editor.selectionBackground": "#19242f",
-		"editor.selectionHighlightBackground": "#416789",
+		"editor.selectionHighlightBackground": "#44637F",
+		// "editor.inactiveSelectionBackground": "#385772",
+
+		"editor.wordHighlightBackground": "#72C05D50",
+		"editor.wordHighlightStrongBackground": "#A6E22E50",
+
 		"editor.findMatchHighlightBackground": "#3F9AB7",
-		"editorOverviewRuler.findMatchForeground": "#FFF",
-		"editor.inactiveSelectionBackground": "#385772",
-		"editorWhitespace.foreground": "#61bbc8",
-		"editor.lineHighlightBackground": "#243443",
+		"editorOverviewRuler.findMatchForeground": "#E6DB74",
+		"editor.findMatchBackground": "#FFFFFF40",
+		"editor.findRangeHighlightBackground": "#19242f75",
+
+		"editor.hoverHighlightBackground": "#1B2733",
+
+		// "editor.lineHighlightBackground": "#243443",
+		"editor.lineHighlightBorder": "#19242f",
+
+		"editorLink.activeForeground": "#72C05D",
+		"editor.rangeHighlightBackground": "#ca94ff15",
+
+		// "editorWhitespace.foreground": "#61bbc8",
+		// "editorIndentGuide.background": "#ff0000",
+		// "editorRuler.foreground": "#ff0000",
+		"editorCodeLens.foreground": "#243443",
+
+		// "editorBracketMatch.background": "#ff0000",
+		// "editorBracketMatch.border": "#ff0000",
+
+		"editorOverviewRuler.border": "#1B2733",
+
+		"editorError.foreground": "#F92672",
+		// "editorError.border": "#ff0000",
+		// "editorWarning.border": "#ff0000",
+		"editorWarning.foreground": "#72C05D",
+
+		// "editorGutter.background": "#ff0000",
+
 		"diffEditor.removedTextBackground": "#2b3e50",
 		"diffEditor.removedTextBorder": "#F92672",
 		"diffEditor.insertedTextBackground": "#2b3e50",
 		"diffEditor.insertedTextBorder": "#A6E22E",
-		"activityBar.border": "#5c98cd",
-		"sideBar.border": "#5c98cd",
-		"tab.activeBorder": "#5c98cd",
-		"panelTitle.activeBorder": "#5c98cd"
+
+		"panel.background": "#2b3e50",
+		"panel.border": "#8be0fd",
+		"panelTitle.activeBorder": "#66D9EF",
+		"panelTitle.activeForeground": "#f8f8f2",
+		"panelTitle.inactiveForeground": "#5c98cd",
 		// "tab.border": "#5c98cd"
+
+		"statusBar.background": "#1B2733",
+		"statusBar.foreground": "#f8f8f2",
+		"statusBar.debuggingForeground": "#f8f8f2",
+		"statusBar.debuggingBackground": "#F92672",
+		// "statusBar.debuggingBorder": "#1B2733",
+		"statusBar.noFolderBackground": "#1B2733",
+		"statusBarItem.prominentBackground": "#F92672"
 
 	},
 	"tokenColors": [
