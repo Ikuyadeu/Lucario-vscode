@@ -148,7 +148,22 @@
 		"statusBar.debuggingBackground": "#F92672",
 		// "statusBar.debuggingBorder": "#1B2733",
 		"statusBar.noFolderBackground": "#1B2733",
-		"statusBarItem.prominentBackground": "#F92672"
+		"statusBarItem.prominentBackground": "#F92672",
+
+		"merge.currentHeaderBackground": "#72C05D",
+		"merge.incomingHeaderBackground": "#5c98cd",
+
+		"notification.background": "#2b3e50",
+		"notification.foreground": "#f8f8f2",
+
+		// Debug
+		"debugToolBar.background": "#1B2733",
+
+		// Picker Group
+		"pickerGroup.border": "#5c98cd",
+		"pickerGroup.foreground": "#E6DB74",
+
+		"walkThrough.embeddedEditorBackground": "#2b3e50"
 
 	},
 	"tokenColors": [

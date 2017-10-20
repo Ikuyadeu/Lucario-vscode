@@ -6,7 +6,7 @@
     },
     "icon": "images/lucario.png",
     "description": "The best colorful flat theme ever.",
-    "license": "MIT",
+    "license": "SEE LICENSE IN LICENSE",
     "repository": {
         "type": "git",
         "url": "https://github.com/Ikuyadeu/Lucario-vscode.git"
@@ -14,7 +14,7 @@
     "bugs": {
         "url": "https://github.com/Ikuyadeu/Lucario-vscode/issues"
     },
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "Ikuyadeu",
     "engines": {
         "vscode": "^1.17.0"
