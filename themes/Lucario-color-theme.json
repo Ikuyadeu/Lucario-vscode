@@ -58,7 +58,7 @@
 		// "activityBar.dropBackground": "#ff0000",
 		"activityBar.foreground": "#F8F8F2",
 		// "activityBar.border": "#5c98cd",
-		"activityBarBadge.background": "#66D9EF",
+		"activityBarBadge.background": "#4a9cef",
 		"activityBarBadge.foreground": "#F8F8F2",
 
 		// Side Bar
@@ -129,6 +129,15 @@
 		"editorWarning.foreground": "#72C05D",
 
 		// "editorGutter.background": "#ff0000",
+		"editorGutter.modifiedBackground": "#ffab28",
+		"editorGutter.addedBackground": "#A6E22E",
+		"editorGutter.deletedBackground": "#F92672",
+
+		"gitDecoration.modifiedResourceForeground": "#ffab28",
+		"gitDecoration.deletedResourceForeground": "#F92672",
+		"gitDecoration.untrackedResourceForeground": "#A6E22E",
+		"gitDecoration.ignoredResourceForeground": "#5c98cd",
+		"gitDecoration.conflictingResourceForeground": "#ffab28",
 
 		"diffEditor.removedTextBackground": "#2b3e50",
 		"diffEditor.removedTextBorder": "#F92672",
@@ -140,7 +149,7 @@
 		"panelTitle.activeBorder": "#66D9EF",
 		"panelTitle.activeForeground": "#f8f8f2",
 		"panelTitle.inactiveForeground": "#5c98cd",
-		// "tab.border": "#5c98cd"
+		// "tab.border": "#5c98cd
 
 		"statusBar.background": "#1B2733",
 		"statusBar.foreground": "#f8f8f2",
@@ -173,6 +182,47 @@
 				"selectionBorder": "#10171e",
 				"findHighlight": "#3F9AB7",
 				"findHighlightForeground": "#FFF"
+			}
+		},
+		{
+			"name": "italic",
+			"scope": [
+				"emphasis",
+				"markup.italic"
+			],
+			"settings": {
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "bold",
+			"scope": [
+				"strong",
+				"markup.bold"
+			],
+			"settings": {
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "underline",
+			"scope": [
+				"underline",
+				"markup.underline"
+			],
+			"settings": {
+				"fontStyle": "underline"	
+			}
+		},
+		{
+			"name": "heading",
+			"scope": [
+				"heading",
+				"markup.heading"
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#66D9EF"
 			}
 		},
 		{
@@ -371,6 +421,7 @@
 				"foreground": "#E6DB74"
 			}
 		}
+		// Markdown
 	],
 	"name": "Lucario"
 }
