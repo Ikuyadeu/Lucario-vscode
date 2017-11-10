@@ -1,4 +1,7 @@
 # Change Log
+##  0.0.6
+* Support gitDecoration, markdown
+
 ## 0.0.5
 * Support picker and conflict color
 * Add Lisence
