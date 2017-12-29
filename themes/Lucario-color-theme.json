@@ -337,7 +337,7 @@
 			"name": "Tag attribute",
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				"fontStyle": "",
+				"fontStyle": "italic",
 				"foreground": "#72C05D"
 			}
 		},
@@ -379,8 +379,8 @@
 			"name": "Invalid",
 			"scope": "invalid",
 			"settings": {
-				"fontStyle": "",
-				"foreground": "#F8F8F0"
+				"fontStyle": "italic underline",
+				"foreground": "#F92672"
 			}
 		},
 		{
