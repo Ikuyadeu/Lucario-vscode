@@ -1,5 +1,8 @@
 # Change Log
-##  0.0.6
+## 0.0.7
+* Fix Based on Dracula
+
+## 0.0.6
 * Support gitDecoration, markdown
 
 ## 0.0.5
