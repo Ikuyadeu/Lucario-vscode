@@ -129,15 +129,15 @@
 		"editorWarning.foreground": "#72C05D",
 
 		// "editorGutter.background": "#ff0000",
-		"editorGutter.modifiedBackground": "#ffab28",
-		"editorGutter.addedBackground": "#A6E22E",
-		"editorGutter.deletedBackground": "#F92672",
+		"editorGutter.modifiedBackground": "#e94b3590",
+		"editorGutter.addedBackground": "#199c4b90",
+		"editorGutter.deletedBackground": "#F9267290",
 
-		"gitDecoration.modifiedResourceForeground": "#ffab28",
-		"gitDecoration.deletedResourceForeground": "#F92672",
-		"gitDecoration.untrackedResourceForeground": "#A6E22E",
+		"gitDecoration.modifiedResourceForeground": "#e94b35",
+		"gitDecoration.deletedResourceForeground": "#e94b35",
+		"gitDecoration.untrackedResourceForeground": "#199c4b",
 		"gitDecoration.ignoredResourceForeground": "#5c98cd",
-		"gitDecoration.conflictingResourceForeground": "#ffab28",
+		"gitDecoration.conflictingResourceForeground": "#e94b35",
 
 		"diffEditor.removedTextBackground": "#2b3e50",
 		"diffEditor.removedTextBorder": "#F92672",
@@ -162,8 +162,8 @@
 		"merge.currentHeaderBackground": "#72C05D",
 		"merge.incomingHeaderBackground": "#5c98cd",
 
-		"notification.background": "#2b3e50",
-		"notification.foreground": "#f8f8f2",
+		"editorOverviewRuler.currentContentForeground": "#72C05D",
+		"editorOverviewRuler.incomingContentForeground": "#5c98cd",
 
 		// Debug
 		"debugToolBar.background": "#1B2733",
@@ -177,20 +177,13 @@
 	},
 	"tokenColors": [
 		{
-			"settings": {
-				"foreground": "#F8F8F2",
-				"selectionBorder": "#10171e",
-				"findHighlight": "#3F9AB7",
-				"findHighlightForeground": "#FFF"
-			}
-		},
-		{
 			"name": "italic",
 			"scope": [
 				"emphasis",
 				"markup.italic"
 			],
 			"settings": {
+				"foreground": "#ff6541",
 				"fontStyle": "italic"
 			}
 		},
@@ -201,7 +194,17 @@
 				"markup.bold"
 			],
 			"settings": {
+				"foreground": "#ff6541",
 				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "raw",
+			"scope": [
+				"markup.raw"
+			],
+			"settings": {
+				"foreground": "#66d9ef"
 			}
 		},
 		{
@@ -301,7 +304,7 @@
 			],
 			"settings": {
 				"fontStyle": "underline",
-				"foreground": "#72C05D"
+				"foreground": "#72cc5a"
 			}
 		},
 		{
@@ -309,7 +312,7 @@
 			"scope": "entity.other.inherited-class",
 			"settings": {
 				"fontStyle": "italic underline",
-				"foreground": "#72C05D"
+				"foreground": "#72cc5a"
 			}
 		},
 		{
@@ -317,7 +320,7 @@
 			"scope": "entity.name.function",
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#72C05D"
+				"foreground": "#72cc5a"
 			}
 		},
 		{
@@ -332,16 +335,18 @@
 			"name": "Tag name",
 			"scope": "entity.name.tag",
 			"settings": {
-				"fontStyle": "",
+				"fontStyle": "italic",
 				"foreground": "#ff6541"
 			}
 		},
 		{
 			"name": "Tag attribute",
-			"scope": "entity.other.attribute-name",
+			"scope": [
+				"entity.other.attribute-name",
+				"markup.heading"
+			],
 			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#72C05D"
+				"foreground": "#72cc5a"
 			}
 		},
 		{
@@ -349,7 +354,7 @@
 			"scope": "support.function",
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#66D9EF"
+				"foreground": "#8be0fd"
 			}
 		},
 		{
@@ -357,7 +362,7 @@
 			"scope": "support.constant",
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#66D9EF"
+				"foreground": "#6be5fd"
 			}
 		},
 		{
@@ -368,14 +373,19 @@
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#66D9EF"
+				"foreground": "#6be5fd"
 			}
 		},
 		{
 			"name": "Library variable",
-			"scope": "support.other.variable",
+			"scope": [
+				"support.other.variable",
+				"variable.unordered",
+				"variable.ordered"
+			],
 			"settings": {
-				"fontStyle": ""
+				"fontStyle": "",
+				"foreground": "#ffab28"
 			}
 		},
 		{
@@ -502,6 +512,28 @@
 			],
 			"settings": {
 				"foreground": "#66D9EF"
+			}
+		},
+		// Language Built-ins 
+		{
+			"name": "Language Built-ins",
+			"scope":[
+				"support"
+			],
+			"settings": {
+				"foreground": "#66D9EF",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Built-in magic functions and constants",
+			"scope":[
+				"support.function.magic",
+				"support.variable",
+				"variable.other.predefined"
+			],
+			"settings": {
+				"foreground": "#FF0000"
 			}
 		}
 	],
