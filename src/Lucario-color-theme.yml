@@ -1,0 +1,1053 @@
+name: Lucario
+author: Yuki Ueda
+semanticClass: theme.lucario
+lucario:
+  base:
+    - &BG        '#2B3E50'
+    - &FG        '#F8F8F2'
+    - &SELECTION '#19242F'
+    - &COMMENT   '#5C98CD'
+    - &CYAN      '#66D9EF'
+    - &GREEN     '#199C4B'
+    - &ORANGE    '#FFAB28'
+    - &PINK      '#FF73FD'
+    - &PURPLE    '#CA94FF'
+    - &RED       '#F92672'
+    - &YELLOW    '#E6DB74'
+  ansi:
+    - &COLOR0        '#21222C'
+    - &COLOR1        '#FF5555'
+    - &COLOR2        '#A6E22E'
+    - &COLOR3        '#F1FA8C'
+    - &COLOR4        '#BD93F9'
+    - &COLOR5        '#FF79C6'
+    - &COLOR5        '#DE559C'
+    - &COLOR6        '#6AC5D3'
+    - &COLOR7        '#D7D4C8'
+    - &COLOR8        '#656B84'
+    - &COLOR9        '#FF5555'
+    - &COLOR10       '#72cc5a'
+    - &COLOR11       '#F1FA8C'
+    - &COLOR12       '#BD93F9'
+    - &COLOR13       '#FF79C6'
+    - &COLOR14       '#8BE9FD'
+    - &COLOR15       '#F8F8F2'
+  brightOther:
+    # Temporary (awaiting fix)
+    - &TEMP_QUOTES          '#66D9EF'
+    - &TEMP_PROPERTY_QUOTES '#E6DB74'
+  other:
+    - &LineHighlight '#19242f75'
+    - &NonText       '#19242f'
+    - &WHITE         '#FFFFFF'
+    - &TAB_DROP_BG   '#19242f70'
+    # UI Variants
+    - &BGLighter     '#44637F'
+    - &BGLight       '#374F66' # HSV (230   , 25.71, 27.45)
+    - &BGDark        '#22313F' # HSV (234.55, 25   , 17.25)
+    - &BGDarker      '#1B2733' # HSV (234.55, 25   , 13   )
+
+# User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
+colors:
+
+  # Integrated Terminal Colors
+  terminal.background: *BG
+  terminal.foreground: *FG
+  terminal.ansiBrightBlack: *COLOR8
+  terminal.ansiBrightRed: *COLOR9
+  terminal.ansiBrightGreen: *COLOR10
+  terminal.ansiBrightYellow: *COLOR11
+  terminal.ansiBrightBlue: *COLOR12
+  terminal.ansiBrightMagenta: *COLOR13
+  terminal.ansiBrightCyan: *COLOR14
+  terminal.ansiBrightWhite: *COLOR15
+  terminal.ansiBlack: *COLOR0
+  terminal.ansiRed: *COLOR1
+  terminal.ansiGreen: *COLOR2
+  terminal.ansiYellow: *COLOR3
+  terminal.ansiBlue: *COLOR14
+  terminal.ansiMagenta: *CYAN
+  terminal.ansiCyan: *PINK
+  terminal.ansiWhite: *COLOR7
+
+  # Contrast Colors
+  contrastBorder: *BGDarker                                                     # An extra border around elements to separate them from others for greater contrast
+  contrastActiveBorder:                                                         # An extra border around active elements to separate them from others for greater contrast
+
+  # Base Colors
+  focusBorder: *COMMENT                                                         # Overall border color for focused elements. This color is only used if not overridden by a component
+  foreground: *FG                                                               # Overall foreground color. This color is only used if not overridden by a component
+  widget.shadow:                                                                # Shadow color of widgets such as Find/Replace inside the editor
+  selection.background: *COLOR14                                                 # Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal)
+  errorForeground: *RED                                                         # Overall foreground color for error messages (this color is only used if not overridden by a component)
+
+  # Button Control
+  button.background: *SELECTION                                                 # Button background color
+  button.foreground: *FG                                                        # Button foreground color
+  button.hoverBackground:                                                       # Button background color when hovering
+
+  # Dropdown Control
+  dropdown.background: *BGLight                                                 # Dropdown background
+  dropdown.border: *BGDarker                                                    # Dropdown border
+  dropdown.foreground: *FG                                                      # Dropdown foreground
+
+  # Input Control
+  input.background: *BG                                                         # Input box background
+  input.foreground: *FG                                                         # Input box foreground
+  input.border: *BGDarker                                                       # Input box border
+  input.placeholderForeground: *COMMENT                                         # Input box foreground color for placeholder text
+  inputOption.activeBorder: *COLOR14                                             # Border color of activated options in input fields
+  inputValidation.infoBackground:                                               # Input validation background color for information severity
+  inputValidation.infoBorder: *CYAN                                             # Input validation border color for information severity
+  inputValidation.warningBackground:                                            # Input validation background color for information warning
+  inputValidation.warningBorder: *ORANGE                                        # Input validation border color for warning severity
+  inputValidation.errorBackground:                                              # Input validation background color for error severity
+  inputValidation.errorBorder: *RED                                             # Input validation border color for error severity
+
+  # Scroll Bar Control
+  scrollbar.shadow:                                                             # Scroll Bar shadow to indicate that the view is scrolled
+  scrollbarSlider.activeBackground:                                             # Slider background color when active
+  scrollbarSlider.background:                                                   # Slider background color
+  scrollbarSlider.hoverBackground:                                              # Slider background color when hovering
+
+  # Badge
+  badge.foreground: *FG                                                         # Badge foreground color
+  badge.background: *SELECTION                                                  # Badge background color
+
+  # Progress Bar
+  progressBar.background: *CYAN                                                 # Background color of the progress bar shown for long running operations
+
+  # List & Trees
+  list.activeSelectionBackground: *SELECTION                                    # List/Tree background color for the selected item when the list/tree is active
+  list.activeSelectionForeground: *FG                                           # List/Tree foreground color for the selected item when the list/tree is active
+  list.dropBackground: *SELECTION                                               # List/Tree drag and drop background when moving items around using the mouse
+  list.focusBackground: *LineHighlight                                          # List/Tree background color for the focused item when the list/tree is active
+  list.highlightForeground: *PINK                                               # List/Tree foreground color of the match highlights when searching inside the list/tree
+  list.hoverBackground: *LineHighlight                                          # List/Tree background when hovering over items using the mouse
+  list.inactiveSelectionBackground: *LineHighlight                              # List/Tree background color for the selected item when the list/tree is inactive
+  list.inactiveSelectionForeground:                                             # List/Tree foreground color for the selected item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not
+  list.warningForeground: *ORANGE                                               # Color of warning decorations in the explorer
+  list.errorForeground: *RED                                                    # Color of error decorations in the explorer
+  list.hoverForeground:                                                         # List/Tree foreground when hovering over items using the mouse
+  list.focusForeground:                                                         # List/Tree foreground color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not
+
+  # Activity Bar
+  activityBar.background: *BGLight                                              # Activity Bar background color
+  activityBar.dropBackground:                                                   # Drag and drop feedback color for the Activity Bar items
+  activityBar.foreground: *FG                                                   # Activity bar foreground color (for example used for the icons)
+  activityBar.border:                                                           # Activity Bar border color with the Side Bar
+  activityBarBadge.background: *CYAN                                            # Activity notification badge background color
+  activityBarBadge.foreground: *FG                                              # Activity notification badge foreground color
+
+  # Side Bar
+  sideBar.background: *BGDark                                                   # Side Bar background color
+  sideBar.foreground:                                                           # Side Bar foreground color. The Side Bar is the container for views like Explorer and Search
+  sideBar.border:                                                               # Side Bar border color on the side separating the editor
+  sideBarTitle.foreground: *FG                                                  # Side Bar title foreground color
+  sideBarSectionHeader.background:                                              # Side Bar section header background color
+  sideBarSectionHeader.foreground:                                              # Side Bar section header foreground color
+
+  # Editor Group & Tabs
+  editorGroup.background:                                                       # Background color of an editor group. The background color shows up when dragging editor groups around
+  editorGroup.border: *COLOR14                                                   # Color to separate multiple editor groups from each other
+  editorGroup.dropBackground: *TAB_DROP_BG                                      # Background color when dragging editors around
+  editorGroupHeader.noTabsBackground:                                           # Background color of the editor group title header when Tabs are disabled
+  editorGroupHeader.tabsBackground: *BGDarker                                   # Background color of the Tabs container
+  editorGroupHeader.tabsBorder:                                                 # Border color of the editor group title header when tabs are enabled. Editor groups are the containers of editors
+  tab.activeBackground: *BG                                                     # Active Tab background color
+  tab.activeForeground: *FG                                                     # Active Tab foreground color in an active group
+  tab.border: *BGDarker                                                         # Border to separate Tabs from each other
+  tab.activeBorder: !alpha [*CYAN, 80]                                          # A border drawn to the bottom of the active tab
+  tab.unfocusedActiveBorder:                                                    # A border drawn to the bottom of the active tab in an editor group that is not focused
+  tab.inactiveBackground: *BGDark                                               # Inactive Tab background color
+  tab.inactiveForeground: *COMMENT                                              # Inactive Tab foreground color in an active group
+  tab.unfocusedActiveForeground:                                                # Active tab foreground color in an inactive editor group
+  tab.unfocusedInactiveForeground:                                              # Inactive tab foreground color in an inactive editor group
+
+  # Editor Colors
+  editor.foreground: *FG
+  editor.background: *BG
+  editorLineNumber.foreground: *COMMENT
+  editorCursor.foreground:
+
+  editor.selectionBackground: *SELECTION                                        # Color of the editor selection
+  editor.selectionHighlightBackground: *BGLighter                               # Color for regions with the same content as the selection
+  editor.inactiveSelectionBackground:                                           # Color of the selection in an inactive editor
+
+  editor.wordHighlightBackground: !alpha [ *PINK, 50 ]                          # Background color of a symbol during read-access, for example when reading a variable
+  editor.wordHighlightStrongBackground: !alpha [ *GREEN, 50 ]                   # Background color of a symbol during write-access, for example when writing to a variable
+
+  editor.findMatchBackground: !alpha [ *ORANGE, 80 ]
+  editor.findMatchHighlightBackground: !alpha [ *WHITE, 40 ]                    # Color of the other search matches
+  editor.findRangeHighlightBackground: *LineHighlight                           # Color the range limiting the search
+
+  editor.hoverHighlightBackground: *BGDarker                                    # Highlight below the word for which a hover is shown
+
+  editor.lineHighlightBackground:                                               # Background color for the highlight of line at the cursor position
+  editor.lineHighlightBorder: *SELECTION                                        # Background color for the border around the line at the cursor position
+
+  editorLink.activeForeground: *PINK                                            # Color of active links
+  editor.rangeHighlightBackground: !alpha [ *COLOR14, 15 ]                       # Background color of highlighted ranges, like by Quick Open and Find features
+
+  editorWhitespace.foreground: *NonText                                         # Color of whitespace characters in the editor
+  editorIndentGuide.background: *NonText                                        # Color of the editor indentation guides
+  editorIndentGuide.activeBackground: !alpha [ *WHITE, 45]                      # Color of the active indentation guide
+  editorRuler.foreground: *NonText                                              # Color of the editor rulers
+
+  editorCodeLens.foreground: *COMMENT                                           # Foreground color of an editor CodeLens
+
+  # NOTE: These are not set because they tend to be highly contested from
+  # person to person. Thus, setting these is probably better suited
+  # for workbench.colorCustomizations in User Settings
+  editorBracketMatch.background:                                                # Background color behind matching brackets
+  editorBracketMatch.border:                                                    # Color for matching brackets boxes
+
+  editorOverviewRuler.border: *BGDarker                                         # Color of the overview ruler border
+  editorOverviewRuler.findMatchForeground:
+  editorOverviewRuler.rangeHighlightForeground:
+  editorOverviewRuler.selectionHighlightForeground: *ORANGE
+  editorOverviewRuler.wordHighlightForeground: *PINK
+  editorOverviewRuler.wordHighlightStrongForeground: *GREEN
+  editorOverviewRuler.modifiedForeground: !alpha [ *PINK, 80 ]
+  editorOverviewRuler.addedForeground:    !alpha [ *GREEN,  80 ]
+  editorOverviewRuler.deletedForeground:  !alpha [ *RED,    80 ]
+  editorOverviewRuler.errorForeground:    !alpha [ *RED,    80 ]
+  editorOverviewRuler.warningForeground:  !alpha [ *ORANGE, 80 ]
+  editorOverviewRuler.infoForeground:     !alpha [ *PINK,   80 ]
+
+  editorError.foreground: *RED                                                  # Foreground color of error squigglies in the editor
+  editorError.border:                                                           # Border color of error squigglies in the editor
+  editorWarning.foreground: *PINK                                               # Foreground color of warning squigglies in the editor
+  editorWarning.border:                                                         # Border color of warning squigglies in the editor
+
+  editorGutter.background:                                                      # Background color of the editor gutter
+  editorGutter.modifiedBackground: !alpha [ *PINK, 80 ]                       # Editor gutter background color for lines that are modified
+  editorGutter.addedBackground:    !alpha [ *GREEN,  80 ]                       # Editor gutter background color for lines that are added
+  editorGutter.deletedBackground:  !alpha [ *RED,    80 ]                       # Editor gutter background color for lines that are deleted
+
+  # Explorer Colors
+  gitDecoration.modifiedResourceForeground: *PINK
+  gitDecoration.deletedResourceForeground: *RED
+  gitDecoration.untrackedResourceForeground: *GREEN
+  gitDecoration.ignoredResourceForeground: *COMMENT
+  gitDecoration.conflictingResourceForeground: *ORANGE
+
+  # Diff Editor Colors
+  diffEditor.insertedTextBackground: !alpha [ *GREEN, 20 ]                      # Background color for inserted text
+  diffEditor.insertedTextBorder:                                                # Outline color for inserted text
+  diffEditor.removedTextBackground: !alpha [ *RED, 50 ]                         # Background color for removed text
+  diffEditor.removedTextBorder:                                                 # Outline color for removed text
+
+  # Editor Widget Colors
+  editorWidget.background: *BGDark                                              # Background color of editor widgets, such as Find/Replace
+  editorWidgetBorder:                                                           # Border color of the editor widget unless the widget does not contain a border or defines its own border color
+
+  editorSuggestWidget.background: *BGDark                                       # Background color of the suggestion widget
+  editorSuggestWidget.border:                                                   # Border color of the suggestion widget
+  editorSuggestWidget.foreground: *FG                                           # Foreground color of the suggestion widget
+  editorSuggestWidget.highlightForeground:                                      # Color of the match highlights in the suggestion widget
+  editorSuggestWidget.selectedBackground: *SELECTION                            # Background color of the selected entry in the suggestion widget
+
+  editorHoverWidget.background: *BG                                             # Background color of the editor hover
+  editorHoverWidget.border: *COMMENT                                            # Border color of the editor hover
+
+  debugExceptionWidget.background:                                              # Exception widget background color
+  debugExceptionWidget.border:                                                  # Exception widget border color
+
+  editorMarkerNavigation.background: *BGDark                                    # Editor marker navigation widget background
+  editorMarkerNavigationError.background:                                       # Editor marker navigation widget error color
+  editorMarkerNavigationWarning.background:                                     # Editor marker navigation widget warning color
+
+  # Peek View Colors
+  peekView.border: *SELECTION                                                   # Color of the peek view borders and arrow
+  peekViewEditor.background: *BG                                                # Background color of the peek view editor
+  peekViewEditorGutter.background:                                              # Background color of the gutter in the peek view editor
+  peekViewEditor.matchHighlightBackground: !alpha [ *YELLOW, 80 ]               # Match highlight color in the peek view editor
+  peekViewResult.background: *BGDark                                            # Background color of the peek view result list
+  peekViewResult.fileForeground: *FG                                            # Foreground color for file nodes in the peek view result list
+  peekViewResult.lineForeground: *FG                                            # Foreground color for line nodes in the peek view result list
+  peekViewResult.matchHighlightBackground: !alpha [ *YELLOW, 80 ]               # Match highlight color in the peek view result list
+  peekViewResult.selectionBackground: *SELECTION                                # Background color of the selected entry in the peek view result list
+  peekViewResult.selectionForeground: *FG                                       # Foreground color of the selected entry in the peek view result list
+  peekViewTitle.background: *BGDarker                                           # Background color of the peek view title area
+  peekViewTitleDescription.foreground: *COMMENT                                 # Color of the peek view title info
+  peekViewTitleLabel.foreground: *FG                                            # Color of the peek view title
+
+  # Merge Conflicts
+  merge.currentHeaderBackground: !alpha [ *GREEN, 90 ]                          # Current header background in inline merge conflicts
+  merge.currentContentBackground:                                               # Current content background in inline merge conflicts
+  merge.incomingHeaderBackground: !alpha [ *COLOR14, 90 ]                        # Incoming header background in inline merge conflicts
+  merge.incomingContentBackground:                                              # Incoming content background in inline merge conflicts
+  merge.border:                                                                 # Border color on headers and the splitter in inline merge conflicts
+  editorOverviewRuler.currentContentForeground: *GREEN                          # Current overview ruler foreground for inline merge conflicts
+  editorOverviewRuler.incomingContentForeground: *COLOR14                        # Incoming overview ruler foreground for inline merge conflicts
+
+  # Panel Colors
+  panel.background: *BG                                                         # Panel background color
+  panel.border: *COLOR14                                                         # Panel border color on the top separating to the editor
+  panelTitle.activeBorder: *CYAN                                                # Border color for the active panel title
+  panelTitle.activeForeground: *FG                                              # Title color for the active panel
+  panelTitle.inactiveForeground: *COMMENT                                       # Title color for the inactive panel
+
+  # Status Bar Colors
+  statusBar.background: *BGDarker                                               # Standard Status Bar background color
+  statusBar.foreground: *FG                                                     # Status Bar foreground color
+  statusBar.debuggingBackground: *RED                                           # Status Bar background color when a program is being debugged
+  statusBar.debuggingForeground: *BGDarker                                      # Status Bar foreground color when a program is being debugged
+  statusBar.noFolderBackground: *BGDarker                                       # Status Bar foreground color when no folder is opened
+  statusBar.noFolderForeground: *FG                                             # Status Bar background color when no folder is opened
+  statusBarItem.activeBackground:                                               # Status Bar item background color when clicking
+  statusBarItem.hoverBackground:                                                # Status Bar item background color when hovering
+  statusBarItem.prominentBackground: *RED                                       # Status Bar prominent items background color. Prominent items stand out from other Status Bar entries to indicate importance
+  statusBarItem.prominentHoverBackground: *ORANGE                               # Status Bar prominent items background color when hovering. Prominent items stand out from other Status Bar entries to indicate importance
+  statusBar.border:
+
+  # Title Bar Colors (MacOS Only)
+  titleBar.activeBackground: *BGDark                                            # Title Bar background when the window is active
+  titleBar.activeForeground: *FG                                                # Title Bar foreground when the window is active
+  titleBar.inactiveBackground: *BGDarker                                        # Title Bar background when the window is inactive
+  titleBar.inactiveForeground: *COMMENT                                         # Title Bar foreground when the window is inactive
+
+  # Notification Dialog Colors
+  notification.background: *BG                                                  # Notifications background color
+  notification.foreground: *FG                                                  # Notifications foreground color
+  notification.buttonBackground: *SELECTION
+  notification.buttonForeground: *FG
+  notification.buttonHoverBackground: *LineHighlight
+  notification.errorBackground: *RED
+  notification.errorForeground: *FG
+  notification.infoBackground: *PINK
+  notification.infoForeground: *BG
+  notification.warningBackground: *ORANGE
+  notification.warningForeground: *BG
+
+  # Extensions
+  extensionButton.prominentForeground: *FG                                      # Extension view button foreground color (for example Install button).
+  extensionButton.prominentBackground: !alpha [ *GREEN, 90 ]                    # Extension view button background color
+  extensionButton.prominentHoverBackground: !alpha [ *GREEN, 60 ]               # Extension view button background hover color
+
+  # Quick Picker
+  pickerGroup.border: *COLOR14                                                   # Quick picker (Quick Open) color for grouping borders
+  pickerGroup.foreground: *PINK                                                 # Quick picker (Quick Open) color for grouping labels
+
+  # Debug
+  debugToolBar.background: *BGDark                                              # Debug toolbar background color
+
+  # Welcome Page
+  welcomePage.buttonBackground:                                                 # Background color for the buttons on the Welcome page
+  welcomePage.buttonHoverBackground:                                            # Hover background color for the buttons on the Welcome page
+  walkThrough.embeddedEditorBackground: *BGDark                                 # Background color for the embedded editors on the Interactive Playground
+
+
+# Syntaxes
+tokenColors:
+
+# =============================================================================
+# General
+# =============================================================================
+
+  - scope:
+    - emphasis
+    settings:
+      fontStyle: italic
+  - scope:
+    - strong
+    settings:
+      fontStyle: bold
+  - scope:
+    - header
+    settings:
+      foreground: *COLOR14
+  - scope:
+    - source
+    settings:
+      foreground: *FG
+
+  # Diffs
+  # ======
+  - scope:
+    - meta.diff
+    - meta.diff.header
+    settings:
+      foreground: *COMMENT
+  - scope:
+    - markup.inserted
+    settings:
+      foreground: *GREEN
+  - scope:
+    - markup.deleted
+    settings:
+      foreground: *RED
+  - scope:
+    - markup.changed
+    settings:
+      foreground: *ORANGE
+  - scope:
+    - invalid
+    settings:
+      foreground: *RED
+      fontStyle: underline italic
+  - scope:
+    - invalid.deprecated
+    settings:
+      foreground: *FG
+      fontStyle: underline italic
+  - scope:
+    - entity.name.filename
+    settings:
+      foreground: *YELLOW
+  - scope:
+    - markup.error
+    settings:
+      foreground: *RED
+
+  # Markdown / RST / Prose
+  # ======================
+
+  - name: Underlined markup
+    scope:
+    - markup.underline
+    settings:
+      fontStyle: underline
+
+  - name: Bold markup
+    scope:
+    - markup.bold
+    settings:
+      fontStyle: bold
+      foreground: *ORANGE
+
+  - name: Markup headings
+    scope:
+    - markup.heading
+    settings:
+      fontStyle: bold
+      foreground: *COLOR14
+
+  - name: Markup italic
+    scope:
+    - markup.italic
+    settings:
+      foreground: *YELLOW
+      fontStyle: italic
+
+  - name: Bullets, lists (prose)
+    scope:
+    - beginning.punctuation.definition.list.markdown
+    - beginning.punctuation.definition.quote.markdown
+    - punctuation.definition.link.restructuredtext
+    settings:
+      foreground: *PINK
+
+  - name: Inline code (prose)
+    scope:
+    - markup.inline.raw
+    - markup.raw.restructuredtext
+    settings:
+      foreground: *GREEN
+
+  - name: Links (prose)
+    scope:
+    - markup.underline.link
+    - markup.underline.link.image
+    settings:
+      foreground: *PINK
+
+  - name: Link text, image alt text (prose)
+    scope:
+    - meta.link.reference.def.restructuredtext
+    - punctuation.definition.directive.restructuredtext
+    - string.other.link.description
+    - string.other.link.title
+    settings:
+      foreground: *CYAN
+
+  - name: Blockquotes (prose)
+    scope:
+    - entity.name.directive.restructuredtext
+    - markup.quote
+    settings:
+      foreground: *YELLOW
+      fontStyle: italic
+
+  - name: Horizontal rule (prose)
+    scope:
+    - meta.separator.markdown
+    settings:
+      foreground: *COMMENT
+
+  - name: Code blocks
+    scope:
+    - fenced_code.block.language
+    - markup.raw.inner.restructuredtext
+    - markup.fenced_code.block.markdown punctuation.definition.markdown
+    settings:
+      foreground: *GREEN
+
+  - name: Prose constants
+    scope:
+    - punctuation.definition.constant.restructuredtext
+    settings:
+      foreground: *COLOR14
+
+  - name: Braces in markdown headings
+    scope:
+    - markup.heading.markdown punctuation.definition.string.begin
+    - markup.heading.markdown punctuation.definition.string.end
+    settings:
+      foreground: *COLOR14
+
+  - name: Braces in markdown paragraphs
+    scope:
+    - meta.paragraph.markdown punctuation.definition.string.begin
+    - meta.paragraph.markdown punctuation.definition.string.end
+    settings:
+      foreground: *FG
+
+  - name: Braces in markdown blockquotes
+    scope:
+    - markup.quote.markdown meta.paragraph.markdown punctuation.definition.string.begin
+    - markup.quote.markdown meta.paragraph.markdown punctuation.definition.string.end
+    settings:
+      foreground: *YELLOW
+
+# =============================================================================
+# Classes
+# =============================================================================
+
+  - name: User-defined class names
+    scope:
+    - entity.name.type.class
+    settings:
+      foreground: *PINK
+      fontStyle: normal
+
+  - name: this, super, self, etc.
+    scope:
+    - keyword.expressions-and-types.swift
+    - keyword.other.this
+    - variable.language
+    - variable.language punctuation.definition.variable.php # the "$" symbol in $this
+    - variable.other.readwrite.instance.ruby       # ruby's "@" instance symbol
+    - variable.parameter.function.language.special # Special words as parameters
+    settings:
+      foreground: *COLOR14
+      fontStyle: italic
+
+  - name: Inherited classes
+    scope:
+    - entity.other.inherited-class
+    settings:
+      fontStyle: italic
+      foreground: *PINK
+
+# =============================================================================
+# Comments
+# =============================================================================
+
+  - name: Comments
+    scope:
+    - comment
+    - punctuation.definition.comment
+    - unused.comment
+    - wildcard.comment
+    settings:
+      foreground: *COMMENT
+
+  - name: JSDoc-style comment keywords/classes
+    scope:
+    - comment keyword.codetag.notation
+    - comment.block.documentation keyword
+    - comment.block.documentation storage.type.class
+    settings:
+      foreground: *PINK
+      fontStyle: italic
+
+  - name: JSDoc-style comment parameters
+    scope:
+    - comment.block.documentation variable
+    settings:
+      foreground: *ORANGE
+      fontStyle: italic
+
+# =============================================================================
+# Constants
+# =============================================================================
+
+  - name: Constants
+    scope:
+    - constant
+    - variable.other.constant
+    settings:
+      foreground: *COLOR14
+
+  - name: Constant escape sequences
+    scope:
+    - constant.character.escape
+    - constant.character.string.escape
+    - constant.regexp
+    settings:
+      foreground: *CYAN
+
+# =============================================================================
+# Entities
+# =============================================================================
+
+  - name: HTML tags
+    scope:
+    - entity.name.tag
+    settings:
+      foreground: *CYAN
+
+  - name: CSS attribute parent selectors ('&')
+    scope:
+    - entity.other.attribute-name.parent-selector
+    settings:
+      foreground: *CYAN
+
+  - name: HTML/CSS attribute names
+    scope:
+    - entity.other.attribute-name
+    settings:
+      foreground: *GREEN
+      fontStyle: italic
+
+# =============================================================================
+# Functions/Methods
+# =============================================================================
+
+  - name: Function names
+    scope:
+    - entity.name.function
+    - meta.function-call.generic
+    - meta.function-call.object
+    - meta.function-call.php
+    - meta.function-call.static
+    - meta.method-call.java meta.method
+    - meta.method.groovy
+    - support.function.any-method.lua
+    - keyword.operator.function.infix
+    settings:
+      foreground: *GREEN
+
+  - name: Function parameters
+    scope:
+    - entity.name.variable.parameter
+    - meta.at-rule.function variable # Sass function params
+    - meta.at-rule.mixin variable    # Sass mixin params
+    - meta.function.arguments variable.other.php
+    - meta.selectionset.graphql meta.arguments.graphql variable.arguments.graphql
+    - variable.parameter
+    settings:
+      fontStyle: italic
+      foreground: *ORANGE
+
+  - name: Decorators
+    scope:
+    - meta.decorator variable.other.readwrite
+    - meta.decorator variable.other.property
+    settings:
+      foreground: *GREEN
+      fontStyle: italic
+
+  - name: Decorator Objects
+    scope:
+      - meta.decorator variable.other.object
+    settings:
+      foreground: *GREEN
+
+# =============================================================================
+# Keywords
+# =============================================================================
+
+  - name: Keywords
+    scope:
+    - keyword
+    - punctuation.definition.keyword
+    settings:
+      foreground: *CYAN
+
+  - name: Keyword "new"
+    scope:
+    - keyword.control.new
+    - keyword.operator.new
+    settings:
+      fontStyle: bold
+
+  - name: Generic selectors (CSS/SCSS/Less/Stylus)
+    scope:
+    - meta.selector
+    settings:
+      foreground: *CYAN
+
+# =============================================================================
+# Language Built-ins
+# =============================================================================
+
+  - name: Language Built-ins
+    scope:
+    - support
+    settings:
+      fontStyle: italic
+      foreground: *PINK
+
+  - name: Built-in magic functions and constants
+    scope:
+    - support.function.magic
+    - support.variable
+    - variable.other.predefined
+    settings:
+      fontStyle: regular
+      foreground: *COLOR14
+
+  - name: Built-in functions / properties
+    scope:
+    - support.function
+    - support.type.property-name
+    settings:
+      fontStyle: regular
+
+# =============================================================================
+# Punctuation
+# =============================================================================
+
+  - name: Separators (key/value, namespace, inheritance, pointer, hash, slice, etc)
+    scope:
+    - constant.other.symbol.hashkey punctuation.definition.constant.ruby
+    - entity.other.attribute-name.placeholder punctuation # Sass placeholder `%` symbols
+    - entity.other.attribute-name.pseudo-class punctuation
+    - entity.other.attribute-name.pseudo-element punctuation
+    - meta.group.double.toml
+    - meta.group.toml
+    - meta.object-binding-pattern-variable punctuation.destructuring
+    - punctuation.colon.graphql
+    - punctuation.definition.block.scalar.folded.yaml
+    - punctuation.definition.block.scalar.literal.yaml
+    - punctuation.definition.block.sequence.item.yaml
+    - punctuation.definition.entity.other.inherited-class
+    - punctuation.function.swift
+    - punctuation.separator.dictionary.key-value
+    - punctuation.separator.hash
+    - punctuation.separator.inheritance
+    - punctuation.separator.key-value
+    - punctuation.separator.key-value.mapping.yaml
+    - punctuation.separator.namespace
+    - punctuation.separator.pointer-access
+    - punctuation.separator.slice
+    - string.unquoted.heredoc punctuation.definition.string
+    - support.other.chomping-indicator.yaml
+    - punctuation.separator.annotation
+    settings:
+      foreground: *CYAN
+
+  - name: Brackets, braces, parens, etc.
+    scope:
+    - keyword.operator.other.powershell # Commas
+    - keyword.other.statement-separator.powershell
+    - meta.brace.round
+    - meta.function-call punctuation
+    - punctuation.definition.arguments.begin
+    - punctuation.definition.arguments.end
+    - punctuation.definition.entity.begin
+    - punctuation.definition.entity.end
+    - punctuation.definition.tag.cs # HTML tags in comments
+    - punctuation.definition.type.begin
+    - punctuation.definition.type.end
+    - punctuation.section.scope.begin
+    - punctuation.section.scope.end
+    - storage.type.generic.java
+    - string.template meta.brace
+    - string.template punctuation.accessor
+    settings:
+      foreground: *FG
+
+  - name: Variable interpolation operators
+    scope:
+    - meta.string-contents.quoted.double punctuation.definition.variable
+    - punctuation.definition.interpolation.begin
+    - punctuation.definition.interpolation.end
+    - punctuation.definition.template-expression.begin
+    - punctuation.definition.template-expression.end
+    - punctuation.section.embedded.begin
+    - punctuation.section.embedded.coffee
+    - punctuation.section.embedded.end
+    - punctuation.section.embedded.end source.php  # PHP edge case
+    - punctuation.section.embedded.end source.ruby # Issue with ruby's tmLanguage
+    - punctuation.definition.variable.makefile
+    settings:
+      foreground: *CYAN
+
+# =============================================================================
+# Serializable / Config Langages
+# =============================================================================
+
+  - name: Keys (serializable languages)
+    scope:
+    - entity.name.function.target.makefile
+    - entity.name.section.toml
+    - entity.name.tag.yaml
+    - variable.other.key.toml
+    settings:
+      foreground: *PINK
+
+  - name: Dates / timestamps (serializable languages)
+    scope:
+    - constant.other.date
+    - constant.other.timestamp
+    settings:
+      foreground: *ORANGE
+
+  - name: YAML aliases
+    scope:
+    - variable.other.alias.yaml
+    settings:
+      fontStyle: italic underline
+      foreground: *GREEN
+
+# =============================================================================
+# Storage
+# =============================================================================
+
+  - name: Storage
+    scope:
+    - storage
+    - meta.implementation storage.type.objc
+    - meta.interface-or-protocol storage.type.objc
+    - source.groovy storage.type.def
+    settings:
+      fontStyle: regular
+      foreground: *CYAN
+
+  - name: Types
+    scope:
+    - entity.name.type
+    - keyword.primitive-datatypes.swift
+    - keyword.type.cs
+    - meta.protocol-list.objc
+    - meta.return-type.objc
+    - source.go storage.type
+    - source.groovy storage.type
+    - source.java storage.type
+    - source.powershell entity.other.attribute-name
+    - storage.class.std.rust
+    - storage.type.attribute.swift
+    - storage.type.c
+    - storage.type.core.rust
+    - storage.type.cs
+    - storage.type.groovy
+    - storage.type.objc
+    - storage.type.php
+    - storage.type.haskell
+    - storage.type.ocaml
+    settings:
+      fontStyle: italic
+      foreground: *PINK
+
+  - name: Generics, templates, and mapped type declarations
+    scope:
+    - entity.name.type.type-parameter
+    - meta.indexer.mappedtype.declaration entity.name.type # Mapped type declarations
+    - meta.type.parameters entity.name.type                # Generic type declarations
+    settings:
+      foreground: *ORANGE
+
+  - name: Modifiers
+    scope:
+    - storage.modifier
+    settings:
+      foreground: *CYAN
+
+# =============================================================================
+# RegExp
+# =============================================================================
+
+  - name: RegExp string
+    scope:
+    - string.regexp
+    - constant.other.character-class.set.regexp
+    - constant.character.escape.backslash.regexp
+    settings:
+      foreground: *YELLOW
+
+  - name: Non-capture operators
+    scope:
+    # NOTE: The scope name is a misnomer. It is actually non-capture operators
+    - punctuation.definition.group.capture.regexp
+    settings:
+      foreground: *CYAN
+
+  - name: RegExp start and end characters
+    scope:
+    - string.regexp punctuation.definition.string.begin
+    - string.regexp punctuation.definition.string.end
+    settings:
+      foreground: *RED
+
+  - name: Character group
+    scope:
+    - punctuation.definition.character-class.regexp
+    settings:
+      foreground: *PINK
+
+  - name: Capture groups
+    scope:
+    - punctuation.definition.group.regexp
+    settings:
+      foreground: *ORANGE
+
+  - name: Assertion operators
+    scope:
+    - punctuation.definition.group.assertion.regexp
+    - keyword.operator.negation.regexp
+    settings:
+      foreground: *RED
+
+  - name: Positive lookaheads
+    scope:
+    - meta.assertion.look-ahead.regexp
+    settings:
+      foreground: *GREEN
+
+
+# =============================================================================
+# Strings
+# =============================================================================
+
+  - name: Strings
+    scope:
+    - string
+    settings:
+      foreground: *YELLOW
+
+  - name: String quotes (temporary vscode fix)
+    scope:
+    # NOTE: This is a temporary fix for VSCode expand selection.
+    # See (https://github.com/Microsoft/vscode/issues/4795)
+    - punctuation.definition.string.begin
+    - punctuation.definition.string.end
+    settings:
+      foreground: *TEMP_QUOTES
+
+  - name: Property quotes (temporary vscode fix)
+    scope:
+    # NOTE: Same as above
+    - punctuation.support.type.property-name.begin
+    - punctuation.support.type.property-name.end
+    settings:
+      foreground: *TEMP_PROPERTY_QUOTES
+
+# =============================================================================
+# Variables
+# =============================================================================
+
+  - name: Variables and object properties
+    scope:
+    - variable
+    - constant.other.key.perl   # Perl edge case
+    - support.variable.property # Object properties
+    settings:
+      foreground: *FG
+
+  - name: Destructuring / aliasing reference name (LHS)
+    scope:
+    - meta.import variable.other.readwrite                          # Module import aliasing (real name)
+    - meta.export variable.other.readwrite                          # Module import aliasing (real name)
+    - meta.object-binding-pattern-variable variable.object.property # Object destructuring property
+    - meta.variable.assignment.destructured.object.coffee variable  # Object destructuring property (coffeescript)
+    settings:
+      fontStyle: italic
+      foreground: *ORANGE
+
+  - name: Destructuring / aliasing variable name (RHS)
+    scope:
+    - meta.import variable.other.readwrite.alias                             # Module import aliasing (alias name)
+    - meta.export variable.other.readwrite.alias                             # Module import aliasing (alias name)
+    - meta.variable.assignment.destructured.object.coffee variable variable  # Object destructuring variable (coffeescript)
+    settings:
+      fontStyle: normal
+      foreground: *FG
+
+# =============================================================================
+# Language Extensions / Edge Cases
+# =============================================================================
+
+  # GraphQL
+  # =======
+  - name: GraphQL keys
+    scope:
+    - meta.selectionset.graphql variable
+    settings:
+      foreground: *YELLOW
+
+  - name: GraphQL function arguments
+    scope:
+    - meta.selectionset.graphql meta.arguments variable
+    settings:
+      foreground: *FG
+
+  - name: GraphQL fragment name (definition)
+    scope:
+    - entity.name.fragment.graphql
+    - variable.fragment.graphql
+    settings:
+      foreground: *PINK
+
+  # Edge Cases
+  # ==========
+  - name: Edge cases (foreground color resets)
+    scope:
+    - constant.other.symbol.hashkey.ruby                            # Ruby hash keys
+    - keyword.operator.dereference.java                             # Java dot access
+    - keyword.operator.navigation.groovy                            # groovy dot access
+    - meta.scope.for-loop.shell punctuation.definition.string.begin
+    - meta.scope.for-loop.shell punctuation.definition.string.end
+    - meta.scope.for-loop.shell string
+    - storage.modifier.import                                       # Java / Groovy imports
+    - punctuation.section.embedded.begin.tsx
+    - punctuation.section.embedded.end.tsx
+    - punctuation.section.embedded.begin.jsx
+    - punctuation.section.embedded.end.jsx
+    - punctuation.separator.list.comma.css                          # Commas separating selectors in CSS
+    - constant.language.empty-list.haskell
+    settings:
+      foreground: *FG
+
+  # This is set to conform to the standard of coloring langage constants purple.
+  # In this case, this colors "$?", "$@", "$*", "$1", etc..
+  - name: Shell variables prefixed with "$" (edge case)
+    scope:
+    - source.shell variable.other
+    settings:
+      foreground: *COLOR14
+
+  - name: Powershell constants mistakenly scoped to `support`, rather than `constant` (edge)
+    scope:
+    - support.constant
+    settings:
+      fontStyle: normal
+      foreground: *COLOR14
+
+  - name: Makefile prerequisite names
+    scope:
+    - meta.scope.prerequisites.makefile
+    settings:
+      foreground: *YELLOW
+
+  - name: SCSS attibute selector strings
+    scope:
+      - meta.attribute-selector.scss
+    settings:
+      foreground: *YELLOW
+
+  - name: SCSS attribute selector brackets
+    scope:
+      - punctuation.definition.attribute-selector.end.bracket.square.scss
+      - punctuation.definition.attribute-selector.begin.bracket.square.scss
+    settings:
+      foreground: *FG
+
+  - name: Haskell Pragmas
+    scope:
+      - meta.preprocessor.haskell
+    settings:
+      foreground: *COMMENT

@@ -7,6 +7,13 @@
     "icon": "images/lucario.png",
     "description": "The best colorful flat theme ever.",
     "license": "SEE LICENSE IN LICENSE",
+    "scripts": {
+        "attach": "./bootstrap.sh attach",
+        "build": "mkdir -p ./theme && node ./build.js",
+        "eject": "./bootstrap.sh eject",
+        "package": "vsce package -o ./bin/lucario.vsix",
+        "vscode:prepublish": "npm run build"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/Ikuyadeu/Lucario-vscode.git"
@@ -14,7 +21,7 @@
     "bugs": {
         "url": "https://github.com/Ikuyadeu/Lucario-vscode/issues"
     },
-    "version": "0.0.9",
+    "version": "0.1.0",
     "publisher": "Ikuyadeu",
     "engines": {
         "vscode": "^1.17.0"
@@ -38,8 +45,12 @@
             {
                 "label": "Lucario",
                 "uiTheme": "vs-dark",
-                "path": "./themes/Lucario-color-theme.json"
+                "path": "./theme/Lucario-color-theme.json"
             }
         ]
+    },
+    "devDependencies": {
+        "js-yaml": "^3.11.0",
+        "tinycolor2": "^1.4.1"
     }
 }
