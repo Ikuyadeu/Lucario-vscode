@@ -21,10 +21,10 @@
     "bugs": {
         "url": "https://github.com/Ikuyadeu/Lucario-vscode/issues"
     },
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "Ikuyadeu",
     "engines": {
-        "vscode": "^1.17.0"
+        "vscode": "^1.46.0"
     },
     "galleryBanner": {
         "theme": "dark",
@@ -50,7 +50,7 @@
         ]
     },
     "devDependencies": {
-        "js-yaml": "^3.11.0",
+        "js-yaml": "^3.14.0",
         "tinycolor2": "^1.4.1"
     }
 }
